@@ -12,16 +12,15 @@ the grade as an integer, otherwise
 Careful: There are many ways to round a number. You may want to avoid using round() 
 since it uses "round half to even" but grades are rounded using "round half up". 
 """
-from math import ceil
-
+from math import floor
 
 le = int(input())
 re = int(input())
 pe = int(input())
 te = int(input())
-if ((le < 0 and le > 100) or (re < 0 and re > 100) or (pe < 0 and pe > 100) or (te < 0 and te > 100)):
+if ((le < 0 or le > 100) or (re < 0 or re > 100) or (pe < 0 or pe > 100) or (te < 0 or te > 100)):
     print("Input error")
 elif (pe < 40 or te < 40):
     print("RFF")
 else:
-    print(ceil((le+re+13*pe+5*te)/100))
+    print(floor((le+re+13*pe+5*te)/100+0.5))
