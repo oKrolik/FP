@@ -1,6 +1,3 @@
-from re import I
-
-
 a = int(input("a? "))
 b = int(input("b? "))
 
