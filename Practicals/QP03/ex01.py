@@ -16,12 +16,9 @@ For example for num = 5 the output is:
 5 ^ 2 = 25
 """
 
-num = int(input())
-if num > 0:
-    limit = 10 if num > 10 else num
-    for i in range(1,limit+1):
-        if (i == num): print(f"{num} ^ 2 = {num*i}")
-        else: print(f"{num} x {i} = {num*i}")
-else:
-    limit = 10
-    for i in range(1,limit+1): print(f"{num} x {i} = {num*i}")
+n = int(input())
+for i in range(1, 11):
+    if (i == n):
+        print(f"{n} ^ 2 = {n*i}")
+        break
+    print(f"{n} x {i} = {n*i}")
