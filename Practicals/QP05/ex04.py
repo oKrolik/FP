@@ -25,3 +25,21 @@ print(tuple(sorted(multi(((1,2),(2,3),(3,4))))))
 print(tuple(sorted(multi((('A','B'),('B','A'))))))
 
 """
+
+def multi(g):
+    res = ()
+    aux = ()
+    for i in g:
+        (x, y) = i
+        res += ((x, g.count(i), y),)
+    for i in res:
+        if i not in aux:
+            aux += (i,)
+    return (aux)
+
+"""
+print(tuple(sorted(multi((('A','B'),('A','C'),('B','C'),('C','B'),('A','B'))))))
+print(tuple(sorted(multi(()))))
+print(tuple(sorted(multi(((1,2),(2,3),(3,4))))))
+print(tuple(sorted(multi((('A','B'),('B','A'))))))
+"""
